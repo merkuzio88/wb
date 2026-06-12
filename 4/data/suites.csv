@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Тест проверяет сценарий добавления конкретного товара (книги) в корзину со страницы товара и его наличие в самой корзине.","19845","Проверка добавления товара в корзину","","2026-06-12","passed","2026-06-12","","WildberriesCartTest","WildberriesCartTest","testAddProductToCart"
