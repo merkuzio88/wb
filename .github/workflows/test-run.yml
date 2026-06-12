@@ -32,6 +32,12 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Fix permissions for first run
+        if: always()
+        run: |
+          mkdir -p gh-pages
+          sudo rm -rf gh-pages/.git
+
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         if: always()
