@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,15 +22,18 @@ public class ProductPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    @Step("Открываем страницу товара по ссылке: {url}")
     public void open(String url) {
         driver.get(url);
     }
 
+    @Step("Нажимаем на кнопку 'Добавить в корзину'")
     public void clickAddToCart() {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
         button.click();
     }
 
+    @Step("Нажимаем на появившуюся кнопку 'В корзине' для перехода")
     public CartPage clickGoToCart() {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(inCartBtn));
         button.click();
